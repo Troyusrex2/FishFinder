@@ -1,0 +1,12 @@
+<script>
+    // Prevent automatic scrolling to the bottom
+    window.addEventListener('load', () => {
+        const observer = new MutationObserver(() => {
+            window.scrollTo(0, 0);
+        });
+        observer.observe(document.querySelector('#root'), {
+            childList: true,
+            subtree: true
+        });
+    });
+    </script>

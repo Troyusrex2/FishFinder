@@ -1,0 +1,116 @@
+app_config:
+  collection_name: 'FishingHelper'
+  app_title: "The Fishing Finder"
+  default_message: "What would you like to know about fishering?"
+  example_questions:
+    - "Where's a good place to catch large bass?"
+    - "What's the best bait or lure for crappie?"
+    - "How to catch fish in a large lake?"
+    - "What is the best tasting salt water fish?"
+  prompt: |
+    You are Fishing Bot, an AI amalgamation of many fishing influencers and fishing websites. People ask you questions and you answer them from the transcripts of videos the real fishermen.
+    Please give a relevant response to the user's query as though you were talking to them. 
+    Please talk in the manner of someone helping with fishing. 
+    Prior knowledge should not be used. If the question has no relation to the material respond that you don't know. 
+    Ensure to mention whichever URLs you pull data from. If they are videos, mention the timestamps and any relevant information from the provided text.
+    This is an example to show how video xxxxxx with timestamp 121.00 would be shown https://www.youtube.com/watch?v=xxxxxx&t=121s
+    Videos should be incorporated into the text and not as footnotes. 
+  processing_messages:
+    - "Processing..."
+    - "Still working on it..."
+    - "Computing away..."
+    - "This one is tough. Needs extra CPU..."
+    - "Analyzing the data..."
+    - "Crunching numbers..."
+    - "Consulting the AI oracle..."
+  inappropriate_words:
+    - "fuck"
+    - "shit"
+    - "bitch"
+    - "cunt"
+    - "bastard"
+    - "dick"
+    - "asshole"
+    - "damn"
+    - "crap"
+    - "piss"
+    - "slut"
+    - "whore"
+    - "douche"
+    - "nigger"
+    - "faggot"
+    - "cock"
+    - "pussy"
+    - "twat"
+    - "bollocks"
+    - "bugger"
+  disclaimer: |
+    A Streamlit RAG AI Chatbot Powered by LlamaIndex and OpenAI. AI can make mistakes. Please check the videos to be sure. 
+    AI can confuse who is speaking in videos and may misattribute information. This bot is free of charge. 
+    It has no affiliation with YouTube or any of the influencers shown.
+  sidebar_links:
+    - text: "Visit Lowry On Leadership"
+      url: "https://LowryOnLeadership.com/"
+    - text: "Visit my RAG AI Blog on Medium"
+      url: "https://medium.com/@troyusrex"
+  donation_text: "Join us in advancing AI knowledge and innovation with your support. Every donation helps sustain our service."
+  donation_url: "https://lowryonleadership.com/donations/"
+  stop_words:
+    - "a"
+    - "an"
+    - "and"
+    - "are"
+    - "as"
+    - "at"
+    - "be"
+    - "by"
+    - "for"
+    - "from"
+    - "has"
+    - "he"
+    - "in"
+    - "is"
+    - "it"
+    - "its"
+    - "of"
+    - "on"
+    - "that"
+    - "the"
+    - "to"
+    - "was"
+    - "were"
+    - "will"
+    - "with"
+    - "use"
+    - "wear"
+    - "apply"
+    - "put"
+    - "how"
+    - "what"
+    - "which"
+    - "best"
+    - "good"
+    - "great"
+    - "top"
+    - "should"
+    - "could"
+    - "would"
+    - "can"
+  max_questions: 20
+  openai_model: "gpt-4o"
+  mongodb:
+    db_name: 'influencers'
+    query_collection: 'queries'
+    cache_collection: 'query_cache'
+    feedback_collection: 'feedback'
+  search_params:
+    num_candidates: 1000
+    limit: 3
+    k: 60
+  embedding:
+    model: "text-embedding-3-small"
+    batch_size: 10
+  max_example_question_length: 80
+  num_example_questions: 4
+  num_videos_to_display: 3
+  logging_level: "INFO"
